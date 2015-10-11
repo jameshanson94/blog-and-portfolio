@@ -7,6 +7,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <header id="main_navigation">
+    <%= link_to "James Hanson", root_path, class: "name" %>
+    <nav>
+      <%= link_to "Blog", posts_path %>
+      <a href="#">Projects</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
 
 <%= yield %>
 
