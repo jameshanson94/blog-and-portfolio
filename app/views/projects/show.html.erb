@@ -1,0 +1,9 @@
+<header>
+  <p> <%= @project.created_at.strftime("%A, %B, %d") %></p>
+  <p><%= @project.title %></p>  
+</header>
+
+<div>
+  <p><%= @project.description %></p>
+  <a href='<%=  @project.link %>' target='_blank'><%= @project.link %></a>
+</div>
