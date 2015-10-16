@@ -1,9 +1,9 @@
 <header>
-  <p> <%= @project.created_at.strftime("%A, %B, %d") %></p>
-  <p><%= @project.title %></p>  
+  <p class="date"><%= @project.created_at.strftime("%A, %B, %d") %></p>
+  <h1><%= @project.title %></h1>  
 </header>
 
-<div>
-  <p><%= @project.description %></p>
-  <a href='<%=  @project.link %>' target='_blank'><%= @project.link %></a>
+<div id="content">
+  <%= markdown @project.description %>
+  <a href='<%=  @project.link %>' target='_blank'>Visit <%= @project.title %></a>
 </div>

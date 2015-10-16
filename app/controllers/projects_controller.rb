@@ -21,6 +21,18 @@ class ProjectsController < ApplicationController
   def show
   end
 
+  def edit
+  end
+
+  def update
+    if @project.update project_params
+      redirect_to @project, notice: 'Project was successfully updated.'
+    else
+      render 
+    'new'  
+    end
+  end
+
   private
   def project_params
     params.require(:project).permit(:title, :description, :link)
